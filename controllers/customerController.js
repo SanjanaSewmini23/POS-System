@@ -77,13 +77,13 @@ document.getElementById("btnDelete")?.addEventListener("click", () => {
     });
 
     //search customer
-    const searchInput = document.querySelector(".search-bar input"); // Search input එක තෝරා ගැනීම
+    const searchInput = document.querySelector(".search-bar input"); 
 
     searchInput?.addEventListener("keypress", (e) => {
         if (e.key === "Enter") {
-            const id = searchInput.value.trim(); // ටයිප් කරපු ID එක ගැනීම
+            const id = searchInput.value.trim(); 
             
-            const customer = customerModel.searchCustomer(id); // Model එකෙන් සොයා ගැනීම
+            const customer = customerModel.searchCustomer(id); 
 
             if (customer) {
                 customerView.displayCustomerDetails(customer);
