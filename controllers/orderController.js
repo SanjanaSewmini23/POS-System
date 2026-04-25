@@ -172,15 +172,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-// Reset Order බොත්තම ක්‍රියා කරවීම
 document.getElementById("btnResetOrder")?.addEventListener("click", () => {
-    // 1. තහවුරු කරගැනීමක් ඇසීම
     if (confirm("Are you sure you want to clear the entire order?")) {
         
-        // 2. View එකේ තියෙන resetOrderForm function එක call කිරීම
         orderView.resetOrderForm();
         
-        // 3. ඊළඟට එන Order ID එක සහ දිනය නැවත සකස් කිරීම
         const nextId = orderModel.generateNextOrderId();
         document.getElementById("orderId").value = nextId;
         document.getElementById('orderDate').valueAsDate = new Date();
