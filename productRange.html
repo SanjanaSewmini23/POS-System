@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>S&S ProductRange</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="css/product.css">
+</head>
+
+<body>
+
+<div class="container">
+
+   <div class="sidebar">
+    <img src="assests/logo.png" class="logo">
+
+    <ul>
+        <li id="navDashboard"> 
+            <i class="fas fa-tachometer-alt"></i> Dashboard 
+        </li>
+        <li class="active" id="navProduct">
+            <i class="fa fa-box"></i> Product Range
+        </li>
+        <li id="navCustomer">
+            <i class="fa fa-user"></i> Customer Manage
+        </li>
+        <li id="navStock">
+            <i class="fa fa-cubes"></i> Stock Manage
+        </li>
+        <li id="navOrder">
+            <i class="fa fa-shopping-cart"></i> Order Manage
+        </li>
+    </ul>
+</div>
+
+    <div class="main">
+
+        <div class="top-icons">
+             <i class="fa fa-globe" id="btnGlobe" style="cursor: pointer;" title="Language"></i>
+            <i class="fa fa-gear" id="btnSetting" style="cursor: pointer;" title="Setting"></i>
+            <i class="fas fa-sign-out-alt" id="btnLogout" style="cursor: pointer;" title="Logout"></i>
+        </div>
+
+        <h1>Explore Our Delicious Range</h1>
+
+        <div class="category-box">
+            <select id="category">
+                <option value="">Category</option>
+                <option value="bread">Bread & Buns</option>
+                <option value="cakes">Cakes & Cupcakes</option>
+                <option value="pastries">Pastries</option>
+                <option value="desserts">Sweets & Desserts</option>
+                <option value="drinks">Soft Drinks</option>
+            </select>
+        </div>
+
+        <div class="products">
+
+            <div class="product-card" data-category="bread">
+                <img src="assests/sandwith paan.png">
+                <p>White Sandwich Bread</p>
+                <span>Rs. 120.00</span>
+            </div>
+
+            <div class="product-card" data-category="bread">
+                <img src="assests/roast paan.png">
+                <p>Roast Paan</p>
+                <span>Rs. 30.00</span>
+            </div>
+
+            <div class="product-card" data-category="pastries">
+                <img src="assests/fish chineese roll.png">
+                <p>Fish Chinese Roll</p>
+                <span>Rs. 110.00</span>
+            </div>
+
+            <div class="product-card" data-category="pastries">
+                <img src="assests/chocolate aclairs.png">
+                <p>Chocolate Eclairs</p>
+                <span>Rs. 320.00</span>
+            </div>
+
+            <div class="product-card" data-category="cakes">
+                <img src="assests/chocolate fudge cake.webp">
+                <p>Chocolate Fudge Cake</p>
+                <span>Rs. 350.00</span>
+            </div>
+
+            <div class="product-card" data-category="desserts">
+                <img src="assests/watalappan.png">
+                <p>Watalappam</p>
+                <span>Rs. 100.00</span>
+            </div>
+
+            <div class="product-card" data-category="desserts">
+                <img src="assests/ice cream.png">
+                <p>Ice Cream</p>
+                <span>Rs. 150.00</span>
+            </div>
+
+            <div class="product-card" data-category="drinks">
+                <img src="assests/faluda.png">
+                <p>Faloda</p>
+                <span>Rs. 220.00</span>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="controllers/productController.js"></script>
+</body>
+</html>

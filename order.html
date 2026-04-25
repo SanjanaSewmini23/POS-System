@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&S Order Manage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/order.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <img src="assests/logo.png" class="logo" alt="S&S Logo">
+        <ul>
+            <li id="navDashboard"> 
+                <i class="fas fa-tachometer-alt"></i> Dashboard 
+            </li>
+            <li id="navProduct">
+                <i class="fa fa-box"></i> Product Range
+            </li>
+            <li id="navCustomer">
+                <i class="fa fa-user"></i> Customer Manage
+            </li>
+            <li id="navStock">
+                <i class="fa fa-cubes"></i> Stock Manage
+            </li>
+            <li class="active" id="navOrder">
+                <i class="fa fa-shopping-cart"></i> Order Manage
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="top-icons">
+            <div class="search-bar">
+                <input type="text" id="orderSearch" placeholder="Search order">
+                <i class="fa fa-search"></i>
+            </div>
+             <i class="fa fa-globe" id="btnGlobe" style="cursor: pointer;" title="Language"></i>
+            <i class="fa fa-gear" id="btnSetting" style="cursor: pointer;" title="Setting"></i>
+            <i class="fas fa-sign-out-alt" id="btnLogout" style="cursor: pointer;" title="Logout"></i>
+        </div>
+
+        <h1>Order Management</h1>
+
+        <div class="order-form">
+            <div class="row">
+                <div class="input-group">
+                    <label for="orderId">Order ID</label>
+                    <input type="text" id="orderId">
+                </div>
+                <div class="input-group">
+                    <label for="orderDate">Date</label>
+                    <input type="date" id="orderDate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="custId">Customer ID</label>
+                    <select id="custId">
+                        <option value="" disabled selected>Select Customer ID</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Customer Name" id="custName" readonly>
+                <input type="text" placeholder="Address" id="custAddress" readonly>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="itemId">Item ID</label>
+                    <select id="itemId">
+                        <option value="" disabled selected>Select Item ID</option>
+                    </select>
+                </div>
+                <input type="text" placeholder="Item Name" id="itemName" readonly>
+                <input type="text" placeholder="Unit Price" id="unitPrice" readonly>
+                <input type="text" placeholder="Qty On Hand" id="qtyOnHand" readonly>
+            </div>
+
+            <div class="row">
+                <div class="input-group">
+                    <label for="orderQty">Order Quantity</label>
+                    <input type="number" id="orderQty" min="1">
+                </div>
+                <button type="button" class="btn-cart" id="btnAddToCart">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Unit Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+
+        <div class="order-footer">
+            <div class="total-section">
+                <label>Total (Rs.):</label>
+                <input type="text" id="finalTotal" value="0.00" readonly>
+            </div>
+            <div class="footer-buttons">
+                <button type="button" class="btn-reset" id="btnResetOrder">Reset Order</button>
+                <button type="button" class="btn-place" id="btnPlaceOrder">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="controllers/orderController.js"></script>
+
+</body>
+</html>

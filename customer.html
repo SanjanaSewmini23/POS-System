@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S&S Customer Manage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/customer.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <img src="assests/logo.png" class="logo" alt="S&S Logo">
+        <ul>
+            <li id="navDashboard"> 
+                <i class="fas fa-tachometer-alt"></i> Dashboard 
+            </li>
+            <li id="navProduct">
+                <i class="fa fa-box"></i> Product Range
+            </li>
+            <li class="active" id="navCustomer">
+                <i class="fa fa-user"></i> Customer Manage
+            </li>
+            <li id="navStock">
+                <i class="fa fa-cubes"></i> Stock Manage
+            </li>
+            <li id="navOrder">
+                <i class="fa fa-shopping-cart"></i> Order Manage
+            </li>
+           
+        </ul>
+    </div>
+
+    <div class="main">
+        <div class="top-icons">
+            <div class="search-bar">
+                <input type="text" id="searchCustomer" placeholder="Search customer">
+                <i class="fa fa-search"></i>
+            </div>
+             <i class="fa fa-globe" id="btnGlobe" style="cursor: pointer;" title="Language"></i>
+            <i class="fa fa-gear" id="btnSetting" style="cursor: pointer;" title="Setting"></i>
+            <i class="fas fa-sign-out-alt" id="btnLogout" style="cursor: pointer;" title="Logout"></i>
+        </div>
+
+        <h1>Customer Management</h1>
+
+        <div class="input-container">
+            <div class="input-row">
+                <label for="custId">Customer ID</label>
+                <input type="text" id="custId">
+                
+                <label for="custName">Customer Name</label>
+                <input type="text" id="custName">
+            </div>
+            <div class="input-row full-width">
+                <label for="custAddress">Address</label>
+                <input type="text" id="custAddress">
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="btn" id="btnAddCustomer">Save</button> 
+<button class="btn" id="btnUpdate">Update</button>
+<button class="btn" id="btnDelete">Delete</button>
+<button class="btn" id="btnReset">Reset</button>
+        </div>
+
+        <div class="table-container">
+            <table id="customerTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="controllers/customerController.js"></script>
+
+</body>
+</html>

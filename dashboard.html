@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>S&S Dashboard</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+    <img src="assests/logo.png" class="logo">
+
+    <ul>
+        <li class="active" id="navDashboard"> 
+            <i class="fas fa-tachometer-alt"></i> Dashboard 
+        </li>
+        <li id="navProduct">
+            <i class="fa fa-box"></i> Product Range
+        </li>
+        <li id="navCustomer">
+            <i class="fa fa-user"></i> Customer Manage
+        </li>
+        <li id="navStock">
+            <i class="fa fa-cubes"></i> Stock Manage
+        </li>
+        <li id="navOrder">
+            <i class="fa fa-shopping-cart"></i> Order Manage
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="main">
+
+        <div class="top-icons">
+            <i class="fa fa-globe" id="btnGlobe" style="cursor: pointer;" title="Language"></i>
+            <i class="fa fa-gear" id="btnSetting" style="cursor: pointer;" title="Setting"></i>
+            <i class="fas fa-sign-out-alt" id="btnLogout" style="cursor: pointer;" title="Logout"></i>
+        </div>
+
+        <h1>S&S Bakery & Pastries:<br>Where Every Bite Tells a Story</h1>
+
+        <div class="cards">
+            <div class="card" id="cardProduct">
+                <span class="count-label" id="productCount">20</span>
+                <img src="assests/product range.png">
+                <p>Product Range</p>
+            </div>
+
+            <div class="card" id="cardCustomer">
+                <span class="count-label" id="customerCount">0</span>
+                <img src="assests/customer manage.png">
+                <p>Customer Manage</p>
+            </div>
+
+            <div class="card" id="cardStock">
+                <span class="count-label" id="stockCount">0</span>
+                <img src="assests/item manage.png">
+                <p>Stock Manage</p>
+            </div>
+
+            <div class="card" id="cardOrder">
+                <span class="count-label" id="orderCount">0</span>
+                <img src="assests/order manage.png">
+                <p>Order Manage</p>
+            </div>
+        </div>
+
+        <div class="slider-container">
+                <p>Top selling items</p>
+            <button class="prev" onclick="scrollSlider(-1)">&#10094;</button>
+
+            <div class="slider" id="slider">
+                <div class="item"><img src="assests/chocolate aclairs.png"><p>Chocolate Eclairs</p></div>
+                <div class="item"><img src="assests/ice cream.png"><p>Ice Cream</p></div>
+                <div class="item"><img src="assests/faluda.png"><p>Faloda</p></div>
+                <div class="item"><img src="assests/fish chineese roll.png"><p>Fish Roll</p></div>
+                <div class="item"><img src="assests/roast paan.png"><p>Roast Paan</p></div>
+                <div class="item"><img src="assests/chocolate fudge cake.webp"><p>chocolate fudge cake</p></div>
+            </div>
+
+            <!-- <button class="prev" id="btnPrev">&#10094;</button> -->
+            <div class="slider" id="slider"> ... </div>
+            <button class="next" id="btnNext">&#10095;</button>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="module" src="controllers/dashBoardController.js"></script></body>
+</html>
