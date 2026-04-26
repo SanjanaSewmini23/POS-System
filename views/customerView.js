@@ -20,7 +20,7 @@ export const customerView = {
                 <td>${customer.address}</td>
             `;
         } else {
-            console.error("Table body (#customerTable tbody) සොයාගත නොහැක!");
+            console.error("Table body (#customerTable tbody) not found!");
         }
     },
 
